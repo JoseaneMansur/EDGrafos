@@ -1,18 +1,16 @@
-
 def direcionadoOuNao(arq):
-	arquivo = arq
-	arquivo = "instances/Padrao_Txt/" + arquivo
-	print(arquivo)
-	manipulador = open(arquivo,'r')
+	arq = "instances/Padrao_Txt/" + arq
+	manipulador = open(arq,'r')
 	direcao = manipulador.readline()
 	direcao = direcao.rstrip()
 	if direcao == 'DIRECTED':
 		ehDirecionado = True
 	else:
 		ehDirecionado = False
-		
-	print(ehDirecionado)
+	
 	manipulador.close()
+	return ehDirecionado
+	
 
 
 
