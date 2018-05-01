@@ -24,7 +24,7 @@ def listarLigacoes(arq):
 		lista = lista + [[linha]]
 	lista.pop(0)
 	manipulador.close()
-	print(lista)
+	return lista
 	
 #n5_dir_unwgt_comb0.txt
 

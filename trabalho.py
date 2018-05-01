@@ -1,8 +1,8 @@
 from funcoes import *
 
 nomeArquivo = input("Digite o nome do arquivo: ")
-resultado = direcionadoOuNao(nomeArquivo)
-
-listarLigacoes(nomeArquivo)
+#resultado = direcionadoOuNao(nomeArquivo)
+lista = listarLigacoes(nomeArquivo)
+print(lista[0])
 
 
