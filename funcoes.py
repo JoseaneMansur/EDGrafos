@@ -14,14 +14,14 @@ def direcionadoOuNao(arq):
 	return ehDirecionado
 
 #Função que cria uma lista em que cada elemento dessa lista 
-#é uma lista com a ligação de um vértice
+#é a ligação de um vértice
 def listarLigacoes(arq):
 	arq = "instances/Padrao_Txt/" + arq
 	manipulador = open(arq,'r')
 	lista = []
 	for linha in manipulador:
 		linha = linha.rstrip()
-		lista = lista + [[linha]]
+		lista = lista + [linha]
 	lista.pop(0)
 	manipulador.close()
 	return lista
