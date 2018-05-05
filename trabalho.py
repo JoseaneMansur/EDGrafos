@@ -6,3 +6,4 @@ lista = listarLigacoes(nomeArquivo)
 print(lista)
 
 
+
