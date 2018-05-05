@@ -25,6 +25,22 @@ def listarLigacoes(arq):
 	lista.pop(0)
 	manipulador.close()
 	return lista
+
+def listarVertices(arq):
+	arq = "instances/Padrao_Txt/" + arq
+	manipulador = open(arq,'r')
+	lista = []
+	for linha in manipulador:
+		linha = linha.rstrip()
+		lista = lista + [linha]
+	lista.pop(0)
+	lista.split(' ')
+	dicionario = {}
+	for vertice in lista:
+		dicionario[vertice] = vertice
+	lista = dicionario.keys()
+	return lista
+	
 	
 #n5_dir_unwgt_comb0.txt
 
