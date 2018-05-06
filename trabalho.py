@@ -1,12 +1,14 @@
 from funcoes import *
 from classes import *
 
-nomeArquivo = input("Digite o nome do arquivo: ")
+#nomeArquivo = input("Digite o nome do arquivo: ")
 #resultado = direcionadoOuNao(nomeArquivo)
 #lista = listarLigacoes(nomeArquivo)
 #print(lista)
 
-print(listarArestas(nomeArquivo))
+#print(listarVertices(nomeArquivo))
+
+
 	
 
 

@@ -62,9 +62,9 @@ def listarVertices(arq):
 def qntVertices(arq):
 	return len(listarVertices(arq))
 
-#def criarMA(arq):
-#	caminhoArquivo = "instances/Padrao_Txt/" + arq
-#	arquivo = open(caminhoArquivo,'r')
+def criarMA(arq):
+	caminhoArquivo = "instances/Padrao_Txt/" + arq
+	arquivo = open(caminhoArquivo,'r')
 	
 	
 	
