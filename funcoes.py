@@ -50,11 +50,11 @@ def listarVertices(arq):
 	lista = listarArestas(arq)
 	listaVertices = []
 	#Percorre cada aresta (par de vértices) da lista inserindo em uma lista
-	# de vertices todos os vertices sem repetição e em ordem crescente 	
-	for par in lista:
-		for elemento in par:
-			if elemento not in listaVertices:
-				listaVertices.append(elemento)
+	# de vertices todos os vertices, sem repetição e em ordem crescente 	
+	for i in range(len(lista)):
+		for j in range(2):
+			if lista[i][j] not in listaVertices:
+				listaVertices.append(lista[i][j])
 	listaVertices.sort()
 	
 	return listaVertices
