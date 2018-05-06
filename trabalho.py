@@ -2,22 +2,31 @@ from funcoes import *
 from classes import *
 
 #nomeArquivo = input("Digite o nome do arquivo: ")
-#resultado = direcionadoOuNao(nomeArquivo)
-#lista = listarLigacoes(nomeArquivo)
-#print(lista)
+#print(qntVertices(nomeArquivo))
 
-#print(listarVertices(nomeArquivo))
+#quantidadeVertices = qntVertices(nomeArquivo)
+#listaV = listarArestas(nomeArquivo)
+#print(listaV)
 
-#listaA = listarArestas(nomeArquivo)
-#print(listaA)
-#print(listaA[0])
-#print(listaA[0][0])
-#listaV = listarVertices(nomeArquivo)
-#grafo = Grafo(listaV,listaA)
-#print('Vertices: ', grafo.vertices)
+matriz = []
+for i in range(x):
+	linha = []
+	for j in range(x):
+		linha.append(valor)
+	matriz.append(linha)
 
-#print('Arestas: ', grafo.arestas)
-#print(ehPonderado(nomeArquivo))
+
+
+
+'''
+#IMPRESSÃO
+for i in matriz:
+	for j in i:
+		print(j, end = ' ')
+	print("\n")
+'''
+
+
 
 #n5_dir_unwgt_comb0.txt
 #n10_dir_wgt_comb3.txt
