@@ -8,11 +8,6 @@ from classes import *
 
 #print(listarVertices(nomeArquivo))
 
-
-	
-
-
-
 #listaA = listarArestas(nomeArquivo)
 #print(listaA)
 #print(listaA[0])
@@ -20,8 +15,9 @@ from classes import *
 #listaV = listarVertices(nomeArquivo)
 #grafo = Grafo(listaV,listaA)
 #print('Vertices: ', grafo.vertices)
-#print('Arestas: ', grafo.arestas)
 
+#print('Arestas: ', grafo.arestas)
+#print(ehPonderado(nomeArquivo))
 
 #n5_dir_unwgt_comb0.txt
 #n10_dir_wgt_comb3.txt

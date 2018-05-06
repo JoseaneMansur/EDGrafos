@@ -5,3 +5,6 @@ class Grafo(object):
 
 class Matriz_Adj(object):
 	pass
+
+class MatrizInc(object):
+	pass
