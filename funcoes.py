@@ -58,6 +58,16 @@ def listarVertices(arq):
 	listaVertices.sort()
 	
 	return listaVertices
+
+def qntVertices(arq):
+	return len(listarVertices(arq))
+
+#def criarMA(arq):
+#	caminhoArquivo = "instances/Padrao_Txt/" + arq
+#	arquivo = open(caminhoArquivo,'r')
+	
+	
+	
 	
 #n5_dir_unwgt_comb0.txt
 #n10_dir_wgt_comb3.txt

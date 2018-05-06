@@ -6,9 +6,15 @@ nomeArquivo = input("Digite o nome do arquivo: ")
 #lista = listarLigacoes(nomeArquivo)
 #print(lista)
 
+print(listarArestas(nomeArquivo))
+	
 
-listaA = listarArestas(nomeArquivo)
-print(listaA)
+
+
+#listaA = listarArestas(nomeArquivo)
+#print(listaA)
+#print(listaA[0])
+#print(listaA[0][0])
 #listaV = listarVertices(nomeArquivo)
 #grafo = Grafo(listaV,listaA)
 #print('Vertices: ', grafo.vertices)
