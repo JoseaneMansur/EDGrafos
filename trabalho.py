@@ -8,13 +8,14 @@ direcionado = ehDirecionado(nomeArquivo)
 
 
 listaA = listarArestas(nomeArquivo)
-print(listaA)
+#print(listaA)
 listaV = listarVertices(nomeArquivo)
 grafo = Grafo(listaV,listaA,direcionado)
 print('Vertices: ', grafo.vertices)
-#print('Arestas: ', grafo.arestas)
+print('Arestas: ', grafo.arestas)
 #print(ehPonderado(nomeArquivo))
-matriz = MatrizInc(grafo)
-print(matriz.matriz)
+print("Matriz:\n")
+matriz = geraMI(grafo)
+imprimirMI(matriz)
 #n5_dir_unwgt_comb0.txt
 #n10_dir_wgt_comb3.txt

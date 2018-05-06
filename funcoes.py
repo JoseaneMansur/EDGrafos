@@ -58,7 +58,32 @@ def listarVertices(arq):
 	listaVertices.sort()
 	
 	return listaVertices
-	
+
+def geraMI(grafo):
+	lin = len(grafo.arestas)
+	col = len(grafo.vertices)
+	matriz = []
+	for i in range(lin):
+		linha = []
+		for j in range(col):
+			if str(j) in grafo.arestas[i][:2]:
+				if str(j) == grafo.arestas[i][0]:
+					linha.append(grafo.arestas[i][2])
+				else:
+					linha.append('-' + grafo.arestas[i][2])
+			else:
+				linha.append('0')
+		matriz.append(linha)
+	return matriz
+
+def imprimirMI(matriz):
+	linhas = len(matriz)
+	colunas = len(matriz[0])
+	for i in range(linhas):
+		for j in range(colunas):
+			print(matriz[i][j]," ",end = "")
+		print()
+
 #n5_dir_unwgt_comb0.txt
 #n10_dir_wgt_comb3.txt
 
