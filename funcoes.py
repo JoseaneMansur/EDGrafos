@@ -68,7 +68,7 @@ def geraMI(grafo):
 	for i in range(lin): #Percorrendo cada aresta
 		linha = []
 		for j in range(col): #Percorrendo cada vertice
-			if str(j) in grafo.arestas[i][:2]: # Vericica se o vertice pertence àquela ligação(aresta
+			if str(j) in grafo.arestas[i][:2]: # Verifica se o vertice pertence àquela ligação(aresta, dois primeiro termos (u,v)
 				if grafo.direcionado == False: # Se o grafo for não direcionado os pesos são simplesmente inseridos na matriz
 					linha.append(grafo.arestas[i][2])
 				elif str(j) == grafo.arestas[i][0]: #O peso do vértice de saída do arco se mantêm
