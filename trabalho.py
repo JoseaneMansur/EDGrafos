@@ -16,6 +16,6 @@ print('Arestas: ', grafo.arestas)
 #print(ehPonderado(nomeArquivo))
 print("Matriz:\n")
 matriz = geraMI(grafo)
-imprimirMI(matriz)
+imprimirMatriz(matriz)
 #n5_dir_unwgt_comb0.txt
 #n10_dir_wgt_comb3.txt

@@ -18,7 +18,7 @@ def ehPonderado(arq):
 	arquivo.readline()
 	segundaLinha = arquivo.readline().split()
 	arquivo.close()
-	if(len(segundaLinha) > 2):
+	if(len(segundaLinha) > 2):# Se possui mais um valor alem dos vértices da aresta o grafo é ponderado
 		return True
 	else:
 		return False
@@ -59,24 +59,28 @@ def listarVertices(arq):
 	
 	return listaVertices
 
+#Função que gera uma matriz de incidência a partir de um grafo
 def geraMI(grafo):
 	lin = len(grafo.arestas)
 	col = len(grafo.vertices)
 	matriz = []
-	for i in range(lin):
+	for i in range(lin): #Percorrendo cada aresta
 		linha = []
-		for j in range(col):
-			if str(j) in grafo.arestas[i][:2]:
-				if str(j) == grafo.arestas[i][0]:
+		for j in range(col): #Percorrendo cada vertice
+			if str(j) in grafo.arestas[i][:2]: # Vericica se o vertice pertence àquela ligação(aresta
+				if grafo.direcionado == False: # Se o grafo for não direcionado os pesos são simplesmente inseridos na matriz
+					linha.append(grafo.arestas[i][2])
+				elif str(j) == grafo.arestas[i][0]: #O peso do vértice de saída do arco se mantêm
 					linha.append(grafo.arestas[i][2])
 				else:
-					linha.append('-' + grafo.arestas[i][2])
+					linha.append('-' + grafo.arestas[i][2]) # Adiciona sinal negativo ao vértice de chegada do arco
 			else:
-				linha.append('0')
-		matriz.append(linha)
+				linha.append('0') # Insere 0 nas colunas dos vértices que não fazem parte da linha(aresta) analisada
+		matriz.append(linha) # Insere cada linha na matriz
 	return matriz
 
-def imprimirMI(matriz):
+#Função que imprimi as Matrizes de Adjacência/Incidência
+def imprimirMatriz(matriz):
 	linhas = len(matriz)
 	colunas = len(matriz[0])
 	for i in range(linhas):
