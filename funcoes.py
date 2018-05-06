@@ -33,8 +33,8 @@ def listarArestas(arq):
 	lista = []
 	#Para cada linha do arquivo cria uma lista com os vértices pertencentes
 	#à aresta. Ao final  temos como retorno uma lista de listas 
-	#Cada elemento da lista  final é um par(u,v) representando uma aresta
-	print(ehPonderado(arq))
+	#Cada elemento da lista final possui 3 valores(u, v, p) em que
+	#u e v são vértices e p representa o peso da aresta.
 	if(ehPonderado(arq)): 	
 		for linha in arquivo:
 			lista.append(linha.split())
@@ -61,28 +61,29 @@ def listarVertices(arq):
 	
 	return listaVertices
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #n5_dir_unwgt_comb0.txt
+#n10_dir_wgt_comb3.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

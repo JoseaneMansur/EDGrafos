@@ -13,3 +13,7 @@ print(listaA)
 #grafo = Grafo(listaV,listaA)
 #print('Vertices: ', grafo.vertices)
 #print('Arestas: ', grafo.arestas)
+
+
+#n5_dir_unwgt_comb0.txt
+#n10_dir_wgt_comb3.txt
