@@ -44,6 +44,7 @@ def listarArestas(arq):
 	arquivo.close()
 	return lista
 
+
 #Função que cria uma lista em que cada elemento dessa lista 
 #é um vértice
 def listarVertices(arq):
@@ -51,12 +52,12 @@ def listarVertices(arq):
 	listaVertices = []
 	#Percorre cada aresta (par de vértices) da lista inserindo em uma lista
 	# de vertices todos os vertices, sem repetição e em ordem crescente 	
+	maiorIndice = 0	
 	for i in range(len(lista)):
 		for j in range(2):
-			if lista[i][j] not in listaVertices:
-				listaVertices.append(lista[i][j])
-	listaVertices.sort()
-	
+			if int(lista[i][j]) > int(maiorIndice):#Descobre o vértice de maior índice
+				maiorIndice = lista[i][j]
+	listaVertices = list(range(int(maiorIndice)+1))#Enumera todos os vértices de acordo com o maior índice(para incluir vértices desconexos)
 	return listaVertices
 
 #Função que gera uma matriz de incidência a partir de um grafo
@@ -83,6 +84,10 @@ def geraMI(grafo):
 def imprimirMatriz(matriz):
 	linhas = len(matriz)
 	colunas = len(matriz[0])
+	print("linhas: ", linhas, end = "")
+	print()
+	print("colunas: ", colunas, end = "")
+	print()	
 	for i in range(linhas):
 		for j in range(colunas):
 			print(matriz[i][j]," ",end = "")
