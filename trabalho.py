@@ -32,7 +32,7 @@ listaV = listarVertices(nomeArquivo)
 grafo = Grafo(listaV,listaA,direcionado)
 print('Vertices: ', grafo.vertices)
 print('Arestas: ', grafo.arestas)
-geraMA(grafo)
+print(geraMA(grafo))
 
 #print(ehPonderado(nomeArquivo))
 #print("Matriz:\n")
