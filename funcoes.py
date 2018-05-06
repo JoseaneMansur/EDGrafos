@@ -22,7 +22,7 @@ def listarLigacoes(arq):
 	#Para cada linha do arquivo cria uma lista com os vértices pertencentes
 	#à aresta. Ao final  temos como retorno uma lista de listas 
 	#Cada elemento da lista  final é um par(u,v) representando uma aresta 	
-	for linha in manipulador:
+	for linha in arquivo:
 		lista.append(linha.split())
 	lista.pop(0)
 	arquivo.close()
@@ -32,12 +32,12 @@ def listarLigacoes(arq):
 #é um vértice
 def listarVertices(arq):
 	arq = "instances/Padrao_Txt/" + arq
-	manipulador = open(arq,'r')
+	arquivo = open(arq,'r')
 	lista = []
-	for linha in manipulador:
+	for linha in arquivo:
 		lista.append(linha.split())
 	lista.pop(0)
-	manipulador.close()
+	arquivo.close()
 	listaVertices = []
 	#Percorre cada aresta (par de vértices) da lista inserindo em uma lista
 	# de vertices todos os vertices sem repetição e em ordem crescente 	

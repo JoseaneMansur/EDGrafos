@@ -3,9 +3,8 @@ from classes import *
 
 nomeArquivo = input("Digite o nome do arquivo: ")
 #resultado = direcionadoOuNao(nomeArquivo)
-lista = listarLigacoes(nomeArquivo)
-print(lista)
-
+#lista = listarLigacoes(nomeArquivo)
+#print(lista)
 
 listaA = listarLigacoes(nomeArquivo)
 listaV = listarVertices(nomeArquivo)
