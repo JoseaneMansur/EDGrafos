@@ -1,29 +1,47 @@
 #Função que verifica se o grafo é direcionado 
 #ou não-direcionado por meio da leitura da primeira linha do arquivo
-def direcionadoOuNao(arq):
+def ehDirecionado(arq):
 	caminhoArquivo = "instances/Padrao_Txt/" + arq
 	arquivo = open(caminhoArquivo,'r')
 	direcao = arquivo.readline()
 	direcao = direcao.rstrip()
-	if direcao == 'DIRECTED':
-		ehDirecionado = True
-	else:
-		ehDirecionado = False
-	
 	arquivo.close()
-	return ehDirecionado
+	if direcao == 'DIRECTED':
+		return True
+	else:
+		return False
+
+	return ehDirecionad
+
+#Função que verifica se o grafo é ponderado ou não
+def ehPonderado(arq):
+	caminhoArquivo = "instances/Padrao_Txt/" + arq
+	arquivo = open(caminhoArquivo,'r')
+	arquivo.readline()
+	segundaLinha = arquivo.readline().split()
+	arquivo.close()
+	if(len(segundaLinha) > 2):
+		return True
+	else:
+		return False
 
 #Função que cria uma lista em que cada elemento dessa lista 
 #é a ligação de um vértice
-def listarLigacoes(arq):
+def listarArestas(arq):
 	caminhoArquivo = "instances/Padrao_Txt/" + arq
 	arquivo = open(caminhoArquivo,'r')
 	lista = []
 	#Para cada linha do arquivo cria uma lista com os vértices pertencentes
 	#à aresta. Ao final  temos como retorno uma lista de listas 
-	#Cada elemento da lista  final é um par(u,v) representando uma aresta 	
-	for linha in arquivo:
-		lista.append(linha.split())
+	#Cada elemento da lista  final é um par(u,v) representando uma aresta
+	print(ehPonderado(arq))
+	if(ehPonderado(arq)): 	
+		for linha in arquivo:
+			lista.append(linha.split())
+	else:
+		for linha in arquivo:
+			linha += str(1)		
+			lista.append(linha.split())
 	lista.pop(0)
 	arquivo.close()
 	return lista
@@ -31,13 +49,7 @@ def listarLigacoes(arq):
 #Função que cria uma lista em que cada elemento dessa lista 
 #é um vértice
 def listarVertices(arq):
-	arq = "instances/Padrao_Txt/" + arq
-	arquivo = open(arq,'r')
-	lista = []
-	for linha in arquivo:
-		lista.append(linha.split())
-	lista.pop(0)
-	arquivo.close()
+	lista = listarArestas(arq)
 	listaVertices = []
 	#Percorre cada aresta (par de vértices) da lista inserindo em uma lista
 	# de vertices todos os vertices sem repetição e em ordem crescente 	
@@ -49,7 +61,28 @@ def listarVertices(arq):
 	
 	return listaVertices
 	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #n5_dir_unwgt_comb0.txt
 
 
