@@ -79,6 +79,21 @@ def geraMI(grafo):
 		matriz.append(linha) # Insere cada linha na matriz
 	return matriz
 
+def geraMA(grafo):
+	tamanhoListaVertices = len(grafo.vertices)
+	tamanhoListaArestas = len(grafo.arestas)
+	matriz = []
+	for i in range(tamanhoListaVertices): 
+		linha = []
+		for j in range(tamanhoListaVertices): 
+			print("Vértice:", i, "Percorrendo: ", grafo.arestas[j][0])
+			if(str(i) == grafo.arestas[j][0]):
+				print("entrei")
+					
+
+
+
+
 #Função que imprimi as Matrizes de Adjacência/Incidência
 def imprimirMatriz(matriz):
 	linhas = len(matriz)
