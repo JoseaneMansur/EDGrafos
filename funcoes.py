@@ -11,8 +11,6 @@ def ehDirecionado(arq):
 	else:
 		return False
 
-	return ehDirecionad
-
 #Função que verifica se o grafo é ponderado ou não
 def ehPonderado(arq):
 	caminhoArquivo = "instances/Padrao_Txt/" + arq
