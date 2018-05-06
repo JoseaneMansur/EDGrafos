@@ -83,23 +83,27 @@ def geraMA(grafo):
 	tamanhoListaVertices = len(grafo.vertices)
 	tamanhoListaArestas = len(grafo.arestas)
 	matriz = []
+	aux = False
 	for i in range(tamanhoListaVertices): #percorrendo lista de vértices
 		linha = []
 		for j in range(tamanhoListaArestas): #percorrendo lista de arestas 
-			print("Vértice:", i, "Percorrendo: ", grafo.arestas[j][0])
+			#print("Vértice:", i, "Percorrendo: ", grafo.arestas[j][0])
 			if(str(i) == grafo.arestas[j][0]):
-				print("entrei")
+				#print("entrei")
 				for k in range(tamanhoListaVertices):
-					if(str(k) == grafo.arestas[j][1]):
-						print("entrei de novo")
-						linha.append(grafo.arestas[j][2])
+					if((str(k) == grafo.arestas[j][1]) and (aux == False)):
+						#print("entrei de novo")
+						print("i: ",i,"j: ",j,"k: ",k)
+						aux = True;	
+					if(aux):
+						linha.insert(k, grafo.arestas[j][2])
+						aux = False
 					else:	
-						print("nao entrei")
 						linha.append('0')
 		matriz.append(linha)
 	return matriz
 		
-				
+#i é a linha de inserção e k a coluna 			
 
 
 
